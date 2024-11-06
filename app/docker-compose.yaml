@@ -9,7 +9,7 @@ services:
     container_name: nyc-taxi-ui-container  # Nombre asignado al contenedor
     build:
       context: ./UI  # Carpeta que contiene los archivos para construir la imagen del frontend
-      dockerfile: Dockerfile.ui  # Nombre del Dockerfile, relativo al contexto especificado
+      dockerfile: Dockerfile  # Nombre del Dockerfile, relativo al contexto especificado
     ports:
       - "8501:8501"  # Mapea el puerto 8501 del host al puerto 8501 del contenedor
     depends_on:
@@ -23,7 +23,7 @@ services:
     container_name: nyc-taxi-model-container  # Nombre asignado al contenedor backend
     build:
       context: ./model  # Carpeta que contiene los archivos para construir la imagen del backend
-      dockerfile: Dockerfile.model  # Nombre del Dockerfile, relativo al contexto especificado
+      dockerfile: Dockerfile  # Nombre del Dockerfile, relativo al contexto especificado
     ports:
       - "8000:8000"  # Mapea el puerto 8000 del host al puerto 8000 del contenedor
     networks:
